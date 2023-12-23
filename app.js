@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const proxy_router = require('./src/router');
+const fs = require('fs');
 
 dotenv.config();
 const app = express();
@@ -11,6 +12,10 @@ app.use((req, res, _next) => {
 })
 
 proxy_router.load(app);
+
+app.get('/', (req, res) => {
+    res.end(fs.readFileSync('./public/index.html').toString('utf-8'));
+})
 
 app.use((req, res, _next) => {
     res.status(403);
