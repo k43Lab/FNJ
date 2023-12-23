@@ -20,7 +20,7 @@ Envrionment: Node.js 18+
 
 ### Install dependencies
 
-```shell
+```bash
 npm install
 // or other package manager
 // yarn install
@@ -29,6 +29,6 @@ npm install
 
 ### Start proxy server
 
-```shell
+```bash
 npm run start
 ```
