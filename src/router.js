@@ -6,6 +6,10 @@ const proxies = [
     {
         name: 'jsdelivr',
         path: '/jsd/'
+    },
+    {
+        name: 'cdnjs',
+        path: '/cdnjs/'
     }
 ]
 
