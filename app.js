@@ -14,6 +14,7 @@ app.use((req, res, _next) => {
 proxy_router.load(app);
 
 app.get('/', (req, res) => {
+    res.header('Content-Type', 'text/html');
     res.end(fs.readFileSync('./public/index.html').toString('utf-8'));
 })
 
